@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins",sans-serif;
+  background-color: #091e22;
+}
+
+section {
+  color: #fff;
+  padding-top: 3rem;
+}
+
+button {
+  background-color: pink;
+  border: none;
+  height: 3rem;
+  width: 9rem;
+}
+.displayResult button {
+  height: 100%;
+  width: 100%;
+  background-color: pink;
+  color: #000;
+}
+
+.perfect {
+  background-color: green;
+  color: #fff;
+}
+.pairing {
+  background-color: yellow;
+  color: #000;
+}
+.bad {
+  background-color: red;
+  color: #fff;
+}
+
+
+@media screen and (max-width:550px){
+  section {
+    padding-top: 0;
+  }
+}
