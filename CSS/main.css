@@ -22,7 +22,12 @@ button {
   background-color: pink;
   color: #000;
 }
-
+.remarks {
+  margin-bottom: 1rem;
+}
+.remarks > button {
+  margin-bottom: 1rem;
+}
 .perfect {
   background-color: green;
   color: #fff;
@@ -34,6 +39,12 @@ button {
 .bad {
   background-color: red;
   color: #fff;
+}
+.love {
+  display: block;
+}
+.link a {
+  color: grey;
 }
 
 
