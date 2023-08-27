@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="CSS/main.css">
+  <title>Love Calculator</title>
+</head>
+<body>
+  <main>
+    <section class="container mt-5">
+      <div class="intro-texts">
+        <h1>Welcome to GH Scale Love Calculator</h1>
+        <p>Follow the instruction below to find your right match.</p>
+        <div class="list">
+          <ol>
+            <li>Enter your name.</li>
+            <li>Enter lover's name.</li>
+            <li>Click on the "Calculate" love button.</li>
+            <li>Result💯</li>
+          </ol>
+        </div>
+      </div>
+      <div class="loveCalculator container">
+        <div class="form">
+          <div class="head mb-2">
+            <label for="yourName">Enter your name</label>
+          </div>
+          <div class="input mb-2">
+            <input type="text" id="yourName">
+          </div>
+          <div class="head mb-2">
+            <label for="theirName">Enter their name</label>
+          </div>
+          <div class="input mb-2">
+            <input type="text" id="theirName">
+          </div>
+          <div class="buttonResult mb-2">
+            <button id="calculateLove" class="mt-2 love">
+              Calculate
+            </button>
+            <a href="test2.html"></a>
+            <div class="mt-2 link">
+              <a href="index.html" class="pt-2 text-decoration-none">Go Back</a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mt-2">
+            <div class="displayResult mb-2">
+              <button id="result"></button>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-2">
+            <div class="remarks">
+              <button id="remarks">No match!</button>
+              <button id="remarkss">Pairing</button>
+              <button id="remarksss">Match</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    var calc = document.getElementById("calculateLove");
+      calc.addEventListener("click", ()=>{
+        var yourName = document.getElementById("yourName").value;
+        var theirName = document.getElementById("theirName").value;
+        var random = Math.floor(Math.random()*100 + 1);
+            if (random <= 40) {
+             document.getElementById("result").innerHTML = `Lovescore between ${yourName} and ${theirName} is ${random}%. It won't work.`;
+             document.getElementById("remarks").classList.add("bad");
+             document.getElementById("remarksss").classList.remove("perfect");
+             document.getElementById("remarkss").classList.remove("pairing");
+
+           } else if (random <=75) {
+             document.getElementById("result").innerHTML = `Lovescore between ${yourName} and ${theirName} is ${random}%. Congratulations, you're pairing.`;
+             document.getElementById("remarkss").classList.add("pairing");
+             document.getElementById("remarksss").classList.remove("perfect");
+             document.getElementById("remarks").classList.remove("bad");
+           } else {
+             document.getElementById("result").innerHTML = `Lovescore between ${yourName} and ${theirName} is ${random}%. Wow! You are made for each other.`;
+             document.getElementById("remarksss").classList.add("perfect");
+             document.getElementById("remarks").classList.remove("bad");
+             document.getElementById("remarkss").classList.remove("pairing");
+           }
+      });
+
+  </script>
+</body>
+</html>
